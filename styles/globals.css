@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+.auth-container{
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 4px 8px 0 rgb(131 137 160 / 20%);
+  box-shadow: 0 4px 8px 0 rgb(131 137 160 / 20%);
+  padding: 24px;
+}

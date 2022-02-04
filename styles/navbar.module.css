@@ -1,0 +1,38 @@
+.navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px 0 rgb(131 137 160 / 14%);
+    box-shadow: 0 1px 2px 0 rgb(131 137 160 / 14%);
+    z-index: 4;
+}
+.nav{
+    font-size: 14px;
+    font-family: "Flutterwave",sans-serif;
+    font-weight: 400;
+    color: #1d222c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+@media screen and (min-width: 768px){
+    .nav {
+        height: 90px;
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 576px){
+ .nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+@media screen and (min-width: 576px){
+.nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+}

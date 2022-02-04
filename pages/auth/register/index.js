@@ -33,8 +33,13 @@ export default function SignUp() {
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
+      firstName: data.get('firstName'),
+      lastName: data.get('lastName'),
       email: data.get('email'),
+      phone: data.get('phone'),
       password: data.get('password'),
+      confirmPassword: data.get('confirm-password'),
+
     });
   };
 
@@ -93,10 +98,32 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
+                  id="phone"
+                  label="Phone Number"
+                  type="tel"
+                  name="phone"
+                  autoComplete="tel"
+                />
+              </Grid>
+              <Grid item xs={12}  sm={6}>
+                <TextField
+                  required
+                  fullWidth
                   name="password"
                   label="Password"
                   type="password"
                   id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+              <Grid item xs={12}  sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  name="confirm-password"
+                  label="Confirm Password"
+                  type="password"
+                  id="Confirm-password"
                   autoComplete="new-password"
                 />
               </Grid>

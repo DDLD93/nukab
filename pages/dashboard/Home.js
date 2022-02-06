@@ -23,45 +23,47 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <Container
-        sx={{ pt: 15, bgcolor: "red", display: "flex",height: "100vh" }}
-        maxWidth="xxlg"
-      >
-        <Grid
-          item
-          sx={{ pt: 15, bgcolor: "green", height: "500px" }}
-          xs={4}
-          md={4}
-        ></Grid>
-        <Grid sx={{ bgcolor: "blue", pt: 6 }} xs={8} md={8}>
+      <div className={styles.main}>
+        <div style={{maxWidth:"300px"}} className={styles.app_bar}>
+          <div className={styles.app_card}>Home</div>
+          <div className={styles.app_card}>Bill Payment</div>
+          <div className={styles.app_card}>Airtime</div>
+          <div className={styles.app_card}>Transaction</div>
+          <div className={styles.app_card}>Settings</div>
+          <div className={styles.app_card}>Log Out</div>
+        </div>
+        <div className={styles.main_content}>
           <div className={styles.welcome_banner}>
-            <div>
-              <Typography variant="h3" component="p">
+            <span>
+              <Typography variant="h4" component="p">
                 Home
               </Typography>
               <Typography variant="h6" component="p">
-                Welcome Back,Umar
+                Welcom back, Umar
               </Typography>
-            </div>
+            </span>
             <Button
-              sx={{ height: 45, fontWeight: "bold" }}
+              className={styles.fund_button}
               variant="contained"
               disableElevation
             >
-              Disable elevation
+              Fund Wallet
             </Button>
           </div>
-          <Grid sx={{ bgcolor: "white", pt: 6,height:"fit" }} container spacing={0}>
-            <Grid container sx={{flexDirection:"column"}} item xs={5}>
-              <Card sx={{flex:1,bgcolor: "green"}}>fund</Card>
-              <Card sx={{flex:1,bgcolor: "pink"}}>spend</Card>
-            </Grid>
-            <Grid container item xs={7}>
-              <Card sx={{flex:1}} >transaction</Card>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Container>
+          <div className={styles.main_content_container}>
+            <div className={styles.transaction}>
+              <Card sx={{ minHeight: 600 }}>
+                transaction
+              </Card>
+            </div>
+
+            <div className={styles.balance}>
+              <Card sx={{ height: 150 }}>balance</Card>
+              <Card sx={{ height: 150 }}>spend</Card>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
